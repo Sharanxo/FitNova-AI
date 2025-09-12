@@ -32,7 +32,7 @@ def nutrition_chat(user_id):
                 with st.spinner("Analyzing..."):
                     try:
                         response = client.chat.completions.create(
-                            model="llama3-8b-8192",
+                            model="llama-3.1-8b-instant",
                             messages=[{"role": "user", "content": prompt}]
                         )
                         st.markdown("### 🍽️ Nutrition Summary")
@@ -47,7 +47,7 @@ def nutrition_chat(user_id):
             with st.spinner("Thinking..."):
                 try:
                     response = client.chat.completions.create(
-                        model="llama3-8b-8192",
+                        model="llama-3.1-8b-instant",
                         messages=[{"role": "user", "content": query}]
                     )
                     st.markdown("### 🧠 Nutrition Advice")

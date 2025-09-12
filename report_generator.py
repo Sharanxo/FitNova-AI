@@ -53,7 +53,7 @@ def generate_user_report(user_id, username):
     prompt = f"Summarize this user's progress.\nGoals:\n{gtext}\nWorkouts:\n{wtext}"
 
     response = client.chat.completions.create(
-        model="llama3-8b-8192",  # or "gemma-7b-it"
+        model="llama-3.1-8b-instant",  # Updated from deprecated llama3-8b-8192
         messages=[{"role": "user", "content": prompt}]
     )
     pdf.set_font("Arial", 'B', 12)

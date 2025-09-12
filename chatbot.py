@@ -68,7 +68,7 @@ If no valid goal is found, return an empty JSON: {{}}
 
     try:
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=[{"role": "user", "content": prompt}]
         )
         content = response.choices[0].message.content.strip()
@@ -129,7 +129,7 @@ def fitness_chatbot(user_id):
 
         # AI reply
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=messages
         )
         ai_reply = response.choices[0].message.content

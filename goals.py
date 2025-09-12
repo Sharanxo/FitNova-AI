@@ -62,7 +62,7 @@ def view_goals(user_id):
                 prompt = f"My current goal is {g['goal_type']}: {g['current_value']} out of {g['target_value']}. Provide advice."
                 try:
                     resp = client.chat.completions.create(
-                        model="llama3-8b-8192",
+                        model="llama-3.1-8b-instant",
                         messages=[{"role": "user", "content": prompt}]
                     )
                     st.info(resp.choices[0].message.content)
